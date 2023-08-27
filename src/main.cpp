@@ -8,7 +8,7 @@ locale loc(locale(), new codecvt_utf8<wchar_t>);
 u.init_Stopwords(loc);
 wstring word;
 
-cout<<"DIGITE A QUANTIDADE DE ARQUIVOS A SEREM LIDOS: " <<endl; cin >> num;
+cout<<"DIGITE A QUANTIDADE DE ARQUIVOS: " <<endl; cin >> num;
 
 for(int i=1;i<=num;i++){
 string arquivo = "./dataset/input"+to_string(i)+".data";
@@ -38,8 +38,6 @@ wchar_t* txt = u.getText(loc, arquivo), *ch = txt;
 }
 u.init_Heap();
 u.Print_Heap();
-
-
 
 return 0;
 }
