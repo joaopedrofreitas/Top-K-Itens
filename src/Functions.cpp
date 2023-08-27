@@ -5,7 +5,7 @@ void Utils::init_Stopwords(const locale loc){//OK
     wstring word;
     wifstream file("./dataset/stopwords.txt");
     if(!file.is_open()){
-        cerr << "Não foi possível abrir o arquivo!" << endl;
+        cerr << "PROBLEMA NA ABERTURA DO ARQUIVO" << endl;
         exit(1);
     }
     file.imbue(loc);
@@ -89,7 +89,7 @@ wchar_t* Utils::getText(const locale loc, string name)//OK
 
   if(!txt.is_open())
   {
-    cerr << "Não foi possível abrir o arquivo " << name << endl;
+    cerr << "PROBLEMA NA ABERTURA DO ARQUIVO " << name << endl;
     exit(1);
   }
 
